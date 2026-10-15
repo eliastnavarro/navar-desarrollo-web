@@ -14,7 +14,7 @@ body {
    2. HEADER Y NAVEGACIÓN
 ========================= */
 
-header {
+.header-principal {
     background-color: #1f2937;
     color: #ffffff;
     padding: 1rem 2rem;
@@ -84,7 +84,7 @@ p {
    4. SECCIONES
 ========================= */
 
-section {
+.seccion-principal {
     background-color: #ffffff;
     margin: 1.5rem 0;
     padding: 2rem;
@@ -108,18 +108,18 @@ img {
    6. FOOTER
 ========================= */
 
-footer {
+.footer-principal {
     background-color: #1f2937;
     color: #ffffff;
     padding: 1.5rem 2rem;
     text-align: center;
 }
 
-footer a {
+.footer-principal a {
     color: #f59e0b;
     text-decoration: none;
 }
 
-footer a:hover {
+.footer-principal a:hover {
     text-decoration: underline;
 }
