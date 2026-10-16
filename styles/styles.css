@@ -2,11 +2,27 @@
    1. ESTILOS GENERALES
 ========================= */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: "Montserrat", sans-serif;
     background-color: #f4f4f4;
     color: #222222;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CONTENIDO PRINCIPAL FLEXIBLE */
+
+main {
+    flex: 1;
 }
 
 
@@ -18,17 +34,21 @@ body {
     background-color: #1f2937;
     color: #ffffff;
     padding: 1rem 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
 }
 
 nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-nav li {
-    display: inline-block;
-    margin-right: 1rem;
 }
 
 nav a {
@@ -42,7 +62,7 @@ nav a:hover {
 }
 
 .marca {
-    margin: 0 0 1rem 0;
+    margin: 0;
     color: #ffffff;
     font-size: 1.25rem;
     font-weight: 700;
@@ -89,8 +109,92 @@ p {
     margin: 1.5rem 0;
     padding: 2rem;
     border-radius: 0.5rem;
+    }
+
+/* CONTENEDOR FLEXIBLE DE SERVICIOS */
+
+.contenedor-servicios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
+/* TARJETAS FLEXIBLES DE SERVICIOS */
+
+.contenedor-servicios article {
+    flex: 1 1 300px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+/* CONTENEDOR FLEXIBLE DE PROYECTOS */
+
+.contenedor-proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* TARJETAS DE AREAS DE TRABAJO */
+
+.contenedor-proyectos article {
+    flex: 1 1 250px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+/* CONTENEDOR DE LA PAGINA SERVICIOS */
+
+.contenedor-pagina-servicios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* TARJETAS DE LA PAGINA SERVICIOS */
+
+.contenedor-pagina-servicios article {
+    flex: 1 1 250px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+/* CONTENEDOR FLEXIBLE DEL PERFIL */
+
+.contenedor-perfil {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* TARJETAS DEL PERFIL PROFESIONAL */
+
+.contenedor-perfil article {
+    flex: 1 1 300px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+/* CONTENEDOR FLEXIBLE DE CONTACTO */
+
+.contenedor-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* TARJETAS DE CANALES DE CONTACTO */
+
+.contenedor-contacto article {
+    flex: 1 1 300px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
 
 /* =========================
    5. IMÁGENES
