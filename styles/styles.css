@@ -25,6 +25,30 @@ main {
     flex: 1;
 }
 
+/* GRID PRINCIPAL - PREENTREGA 4 */
+
+.layout-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+.layout-grid > header {
+    grid-area: header;
+}
+
+.layout-grid > main {
+    grid-area: main;
+}
+
+.layout-grid > footer {
+    grid-area: footer;
+}
+
 
 /* =========================
    2. HEADER Y NAVEGACIÓN
@@ -33,16 +57,18 @@ main {
 .header-principal {
     background-color: #1f2937;
     color: #ffffff;
-    padding: 1rem 2rem;
+    padding: 1rem;
 
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 nav ul {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
 
@@ -128,11 +154,11 @@ p {
     border-radius: 8px;
 }
 
-/* CONTENEDOR FLEXIBLE DE PROYECTOS */
+/* CONTENEDOR GRID DE PROYECTOS - MOBILE FIRST */
 
 .contenedor-proyectos {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
     gap: 20px;
 }
 
@@ -226,4 +252,24 @@ img {
 
 .footer-principal a:hover {
     text-decoration: underline;
+}
+
+/* =================================
+   7. MEDIA QUERIES - ESCRITORIO
+================================= */
+
+@media (min-width: 1024px) {
+
+    /* Encabezado horizontal */
+    .header-principal {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    /* Proyectos distribuidos en 3 columnas */
+    .contenedor-proyectos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
 }
