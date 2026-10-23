@@ -65,7 +65,7 @@ main {
     gap: 1rem;
 }
 
-nav ul {
+.header-principal nav ul:not(.navbar-nav) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -77,13 +77,13 @@ nav ul {
     padding: 0;
 }
 
-nav a {
+.header-principal nav a:not(.nav-link) {
     color: #ffffff;
     text-decoration: none;
     font-weight: 600;
 }
 
-nav a:hover {
+.header-principal nav a:not(.nav-link):hover {
     color: #f59e0b;
 }
 
@@ -272,4 +272,187 @@ img {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
+}
+
+/* NAVBAR PERSONALIZADA NAVAR */
+
+.navbar-navar {
+    background-color: #263746;
+}
+
+.navbar-navar .navbar-brand {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    white-space: normal;
+    line-height: 1.3;
+    max-width: 85%;
+}
+
+.navbar-navar .nav-link {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-navar .nav-link:hover {
+    color: #d6b36a;
+}
+
+.navbar-navar .nav-link:focus {
+    color: #d6b36a;
+    outline: 2px solid #d6b36a;
+    outline-offset: 3px;
+}
+
+.navbar-navar .nav-link:active {
+    color: #ffffff;
+    background-color: #405466;
+}
+
+.navbar-navar .navbar-toggler {
+    border-color: #ffffff;
+}
+
+.navbar-navar .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-navar .navbar-brand {
+        font-size: 1.1rem;
+        max-width: calc(100% - 60px);
+    }
+
+    .navbar-navar .navbar-toggler {
+        flex-shrink: 0;
+    }
+
+    .navbar-navar .navbar-collapse {
+        padding-top: 0.75rem;
+    }
+
+    .navbar-navar .nav-link {
+        padding: 0.65rem 0.25rem;
+    }
+}
+
+/* CAROUSEL BOOTSTRAP - NAVAR */
+
+.imagen-carousel {
+    height: 420px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#carouselNavar .carousel-caption {
+    background-color: rgba(31, 41, 55, 0.85);
+    border-radius: 8px;
+    padding: 12px;
+    bottom: 25px;
+}
+
+#carouselNavar .carousel-caption h3 {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+#carouselNavar .carousel-indicators [data-bs-target] {
+    background-color: #f59e0b;
+}
+
+#carouselNavar .carousel-control-prev-icon,
+#carouselNavar .carousel-control-next-icon {
+    filter: none;
+}
+
+@media (max-width: 576px) {
+    .imagen-carousel {
+        height: 260px;
+    }
+
+    #carouselNavar .carousel-caption {
+        bottom: 12px;
+        padding: 8px;
+    }
+
+    #carouselNavar .carousel-caption h3 {
+        font-size: 0.9rem;
+    }
+}
+
+/* FLECHAS DEL CAROUSEL NAVAR */
+#carouselNavar .carousel-control-prev-icon,
+#carouselNavar .carousel-control-next-icon {
+    background-color: #263746;
+    border-radius: 50%;
+    background-size: 55% 55%;
+    width: 3rem;
+    height: 3rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+#carouselNavar .carousel-control-prev,
+#carouselNavar .carousel-control-next {
+    width: 10%;
+    opacity: 1;
+}
+
+#carouselNavar .carousel-control-prev:hover,
+#carouselNavar .carousel-control-next:hover {
+    opacity: 0.8;
+}
+
+/* INDICADORES DEL CAROUSEL - NAVAR */
+#carouselNavar .carousel-indicators {
+    z-index: 20;
+}
+
+/* ================================
+   INTERACTIVIDAD BOOTSTRAP - NAVAR
+================================ */
+
+/* Transición suave de las tarjetas */
+.card {
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+/* Estado hover de las tarjetas */
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Transición de los botones */
+.btn {
+    transition: background-color 0.25s ease,
+                color 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+/* Estado hover de los botones */
+.btn-dark:hover {
+    background-color: #405466;
+    border-color: #405466;
+}
+
+/* Estado focus visible para teclado */
+.btn:focus-visible {
+    outline: 3px solid #d6b36a;
+    outline-offset: 3px;
+    box-shadow: none;
+}
+
+/* Estado active al pulsar los botones */
+.btn-dark:active {
+    background-color: #1f2937;
+    border-color: #1f2937;
+    transform: scale(0.98);
 }

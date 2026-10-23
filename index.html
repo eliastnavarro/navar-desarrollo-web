@@ -9,22 +9,54 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body class="layout-grid">
- <header class="header-principal">
-    <p class="marca">NAVAR | Arquitectura, Diseño y Construcción</p>
+ 
+<header class="header-principal">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-navar">
+        <div class="container-fluid">
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="pages/sobre-mi.html">Sobre mí</a></li>
-            <li><a href="pages/proyectos.html">Proyectos</a></li>
-            <li><a href="pages/servicios.html">Servicios</a></li>
-            <li><a href="pages/contacto.html">Contacto</a></li>
-        </ul>
+            <a class="navbar-brand marca" href="index.html">
+                NAVAR | Arquitectura, Diseño y Construcción
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal"
+                aria-expanded="false"
+                aria-label="Abrir o cerrar el menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                           aria-current="page"
+                           href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/sobre-mi.html">Sobre mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/proyectos.html">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
     </nav>
 </header>
+
 <main>
     <section class="seccion-principal">
         <h1>Bienvenidos a NAVAR</h1>
@@ -33,13 +65,80 @@
             orientada al desarrollo de espacios funcionales, seguros y acordes con las
             necesidades de cada proyecto.
         </p>
-      <figure>
-    <img src="img/proyecto-construccion.png"
-         alt="Edificio en proceso de construcción con estructura y equipos de obra">
-    <figcaption>
-        Arquitectura, diseño y construcción como parte integral del desarrollo de nuestros proyectos.
-    </figcaption>
-</figure>  
+      
+<div id="carouselNavar" class="carousel slide carousel-fade"
+     data-bs-ride="carousel">
+
+    <!-- Indicadores de las diapositivas -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselNavar"
+            data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Diapositiva 1"></button>
+
+        <button type="button" data-bs-target="#carouselNavar"
+            data-bs-slide-to="1"
+            aria-label="Diapositiva 2"></button>
+
+        <button type="button" data-bs-target="#carouselNavar"
+            data-bs-slide-to="2"
+            aria-label="Diapositiva 3"></button>
+    </div>
+
+    <!-- Imágenes del carousel -->
+    <div class="carousel-inner">
+
+        <div id="construccion" class="carousel-item active">
+            <img src="img/construccion-obras.jpg"
+                class="d-block w-100 imagen-carousel"
+                alt="Construcción y ejecución de obras">
+            <div class="carousel-caption">
+                <h3>Construcción y ejecución de obras</h3>
+            </div>
+        </div>
+
+        <div id="diseno" class="carousel-item">
+            <img src="img/arquitectura-diseno.jpg"
+                class="d-block w-100 imagen-carousel"
+                alt="Proyecto de arquitectura y diseño">
+            <div class="carousel-caption">
+                <h3>Arquitectura y diseño</h3>
+            </div>
+        </div>
+
+        <div id="mantenimiento" class="carousel-item">
+            <img src="img/adecuacion-mantenimiento.jpg"
+                class="d-block w-100 imagen-carousel"
+                alt="Adecuación y mantenimiento de espacios">
+            <div class="carousel-caption">
+                <h3>Adecuación y mantenimiento</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Botón anterior -->
+    <button class="carousel-control-prev" type="button"
+        data-bs-target="#carouselNavar" data-bs-slide="prev"
+        aria-label="Imagen anterior">
+        <span class="carousel-control-prev-icon"
+              aria-hidden="true"></span>
+    </button>
+
+    <!-- Botón siguiente -->
+    <button class="carousel-control-next" type="button"
+        data-bs-target="#carouselNavar" data-bs-slide="next"
+        aria-label="Imagen siguiente">
+        <span class="carousel-control-next-icon"
+              aria-hidden="true"></span>
+    </button>
+
+</div>
+
+<p class="texto-carousel">
+    Arquitectura, diseño y construcción como parte integral
+    del desarrollo de nuestros proyectos.
+</p>
+  
     </section>
 
     <section class="seccion-principal">
@@ -76,5 +175,24 @@
         <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
     </p>
 </footer>  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    const carrusel = document.getElementById('carouselNavar');
+
+    const destinos = {
+        '#construccion': 0,
+        '#diseno': 1,
+        '#mantenimiento': 2
+    };
+
+    const destino = destinos[window.location.hash];
+
+    if (carrusel && destino !== undefined) {
+        const instancia = bootstrap.Carousel.getOrCreateInstance(carrusel);
+        instancia.to(destino);
+    }
+</script>
+
 </body>
 </html>
