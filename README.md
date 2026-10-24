@@ -24,9 +24,9 @@ El sitio reúne información sobre mi perfil profesional, los servicios ofrecido
 
 ## Publicación
 
-El sitio web se publicará mediante GitHub Pages.
+El sitio web está publicado mediante GitHub Pages.
 
-**URL del sitio publicado:** pendiente de configurar.
+**URL del sitio publicado:** https://eliastnavarro.github.io/navar-desarrollo-web/
 
 ## Autor
 
