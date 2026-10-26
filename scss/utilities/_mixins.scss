@@ -1,0 +1,23 @@
+
+/* =========================
+   MIXINS REUTILIZABLES NAVAR
+========================= */
+
+@use "variables" as v;
+
+/* Bordes redondeados configurables */
+@mixin esquinas-redondeadas($radio: 0.5rem) {
+    border-radius: $radio;
+}
+
+/* Transiciones reutilizables */
+@mixin transicion-suave($propiedad: all) {
+    transition: $propiedad v.$transicion-suave;
+}
+
+/* Contenedores flexibles con separación */
+@mixin contenedor-flexible($separacion: 20px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $separacion;
+}

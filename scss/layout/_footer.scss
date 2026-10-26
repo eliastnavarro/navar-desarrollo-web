@@ -1,0 +1,22 @@
+
+/* =========================
+   FOOTER PRINCIPAL NAVAR
+========================= */
+
+@use "../utilities/variables" as v;
+
+.footer-principal {
+    background-color: v.$color-oscuro;
+    color: v.$color-blanco;
+    padding: 1.5rem 2rem;
+    text-align: center;
+
+    a {
+        color: v.$color-acento;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+
+/* =========================
+   BOTONES NAVAR
+========================= */
+
+@use "../utilities/variables" as v;
+
+.btn {
+    transition: background-color 0.25s ease,
+                color 0.25s ease,
+                box-shadow 0.25s ease;
+
+    &:focus-visible {
+        outline: 3px solid v.$color-acento-nav;
+        outline-offset: 3px;
+        box-shadow: none;
+    }
+}
+
+/* Estados del botón oscuro de Bootstrap */
+.btn-dark {
+    &:hover {
+        background-color: v.$color-hover;
+        border-color: v.$color-hover;
+    }
+
+    &:active {
+        background-color: v.$color-oscuro;
+        border-color: v.$color-oscuro;
+        transform: scale(0.98);
+    }
+}

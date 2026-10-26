@@ -1,0 +1,58 @@
+
+/* =========================
+   ESTILOS BASE NAVAR
+========================= */
+
+@use "../utilities/variables" as v;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: v.$fuente-principal;
+    background-color: v.$color-fondo;
+    color: v.$color-texto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenido principal flexible */
+main {
+    flex: 1;
+}
+
+/* Grid principal */
+.layout-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+
+    > header {
+        grid-area: header;
+    }
+
+    > main {
+        grid-area: main;
+    }
+
+    > footer {
+        grid-area: footer;
+    }
+}
+
+/* Imágenes adaptables */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: v.$radio-borde;
+}

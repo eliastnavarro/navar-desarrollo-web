@@ -1,0 +1,148 @@
+
+/* =========================
+   NAVBAR PERSONALIZADA NAVAR
+========================= */
+
+@use "../utilities/variables" as v;
+
+.navbar-navar {
+    background-color: v.$color-oscuro-nav;
+
+    .navbar-brand {
+        color: v.$color-blanco;
+        font-family: v.$fuente-principal;
+        font-size: v.$fuente-marca;
+        font-weight: 700;
+        white-space: normal;
+        line-height: 1.3;
+        max-width: 85%;
+    }
+
+    .nav-link {
+        color: v.$color-blanco;
+        font-family: v.$fuente-principal;
+        font-size: v.$fuente-cuerpo;
+        font-weight: 600;
+        transition: color v.$transicion-suave,
+                    background-color v.$transicion-suave;
+
+        &:hover,
+        &:focus {
+            color: v.$color-acento-nav;
+        }
+
+        &:focus {
+            outline: 2px solid v.$color-acento-nav;
+            outline-offset: 3px;
+        }
+
+        &:active {
+            color: v.$color-blanco;
+            background-color: v.$color-hover;
+        }
+    }
+
+    .navbar-toggler {
+        border-color: v.$color-blanco;
+    }
+
+    .navbar-toggler-icon {
+        filter: brightness(0) invert(1);
+    }
+}
+
+/* Ajustes de la navbar en dispositivos pequeños */
+@media (max-width: 991.98px) {
+    .navbar-navar {
+        .navbar-brand {
+            font-size: 1.1rem;
+            max-width: calc(100% - 60px);
+        }
+
+        .navbar-toggler {
+            flex-shrink: 0;
+        }
+
+        .navbar-collapse {
+            padding-top: 0.75rem;
+        }
+
+        .nav-link {
+            padding: 0.65rem 0.25rem;
+        }
+    }
+}
+
+/* =========================
+   CARRUSEL BOOTSTRAP NAVAR
+========================= */
+
+.imagen-carousel {
+    height: 420px;
+    object-fit: cover;
+    border-radius: v.$radio-tarjeta;
+}
+
+#carouselNavar {
+    .carousel-caption {
+        background-color: rgba(31, 41, 55, 0.85);
+        border-radius: v.$radio-tarjeta;
+        padding: 12px;
+        bottom: 25px;
+
+        h3 {
+            color: v.$color-blanco;
+            font-family: v.$fuente-principal;
+            font-size: v.$fuente-marca;
+            font-weight: 700;
+            margin: 0;
+        }
+    }
+
+    .carousel-indicators {
+        z-index: 20;
+
+        [data-bs-target] {
+            background-color: v.$color-acento;
+        }
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: none;
+        background-color: v.$color-oscuro-nav;
+        border-radius: 50%;
+        background-size: 55% 55%;
+        width: 3rem;
+        height: 3rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10%;
+        opacity: 1;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+/* Ajustes del carrusel en móviles */
+@media (max-width: 576px) {
+    .imagen-carousel {
+        height: 260px;
+    }
+
+    #carouselNavar {
+        .carousel-caption {
+            bottom: 12px;
+            padding: 8px;
+
+            h3 {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}

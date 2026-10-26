@@ -1,458 +1,377 @@
+@charset "UTF-8";
 /* =========================
-   1. ESTILOS GENERALES
+   NAVAR | ARCHIVO PRINCIPAL SCSS
 ========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
-    background-color: #f4f4f4;
-    color: #222222;
-
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* CONTENIDO PRINCIPAL FLEXIBLE */
-
-main {
-    flex: 1;
-}
-
-/* GRID PRINCIPAL - PREENTREGA 4 */
-
-.layout-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas:
-        "header"
-        "main"
-        "footer";
-}
-
-.layout-grid > header {
-    grid-area: header;
-}
-
-.layout-grid > main {
-    grid-area: main;
-}
-
-.layout-grid > footer {
-    grid-area: footer;
-}
-
-
+/* Herramientas */
 /* =========================
-   2. HEADER Y NAVEGACIÓN
+   VARIABLES DE NAVAR
 ========================= */
-
-.header-principal {
-    background-color: #1f2937;
-    color: #ffffff;
-    padding: 1rem;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-.header-principal nav ul:not(.navbar-nav) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.header-principal nav a:not(.nav-link) {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.header-principal nav a:not(.nav-link):hover {
-    color: #f59e0b;
-}
-
-.marca {
-    margin: 0;
-    color: #ffffff;
-    font-size: 1.25rem;
-    font-weight: 700;
-}
-
+/* Colores principales */
+/* Tipografía */
+/* Tamaños de texto */
+/* Espaciados */
+/* Bordes */
+/* Transiciones */
 /* =========================
-   3. TÍTULOS Y TEXTOS
+   MIXINS REUTILIZABLES NAVAR
 ========================= */
-
+/* Bordes redondeados configurables */
+/* Transiciones reutilizables */
+/* Contenedores flexibles con separación */
+/* Estilos generales */
+/* =========================
+   TIPOGRAFÍA NAVAR
+========================= */
 h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    line-height: 1.2;
-    color: #1f2937;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1f2937;
 }
 
 h2 {
-    font-size: 1.75rem;
-    font-weight: 700;
-    line-height: 1.3;
-    color: #1f2937;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #1f2937;
 }
 
 h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 1.4;
-    color: #374151;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #374151;
 }
 
 p {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.6;
-}
-
-
-/* =========================
-   4. SECCIONES
-========================= */
-
-.seccion-principal {
-    background-color: #ffffff;
-    margin: 1.5rem 0;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    }
-
-/* CONTENEDOR FLEXIBLE DE SERVICIOS */
-
-.contenedor-servicios {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-/* TARJETAS FLEXIBLES DE SERVICIOS */
-
-.contenedor-servicios article {
-    flex: 1 1 300px;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-}
-
-/* CONTENEDOR GRID DE PROYECTOS - MOBILE FIRST */
-
-.contenedor-proyectos {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 20px;
-}
-
-/* TARJETAS DE AREAS DE TRABAJO */
-
-.contenedor-proyectos article {
-    flex: 1 1 250px;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-}
-
-/* CONTENEDOR DE LA PAGINA SERVICIOS */
-
-.contenedor-pagina-servicios {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-/* TARJETAS DE LA PAGINA SERVICIOS */
-
-.contenedor-pagina-servicios article {
-    flex: 1 1 250px;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-}
-
-/* CONTENEDOR FLEXIBLE DEL PERFIL */
-
-.contenedor-perfil {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-/* TARJETAS DEL PERFIL PROFESIONAL */
-
-.contenedor-perfil article {
-    flex: 1 1 300px;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-}
-
-/* CONTENEDOR FLEXIBLE DE CONTACTO */
-
-.contenedor-contacto {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-/* TARJETAS DE CANALES DE CONTACTO */
-
-.contenedor-contacto article {
-    flex: 1 1 300px;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
 /* =========================
-   5. IMÁGENES
+   ESTILOS BASE NAVAR
 ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f4f4f4;
+  color: #222222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenido principal flexible */
+main {
+  flex: 1;
+}
+
+/* Grid principal */
+.layout-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" "main" "footer";
+}
+.layout-grid > header {
+  grid-area: header;
+}
+.layout-grid > main {
+  grid-area: main;
+}
+.layout-grid > footer {
+  grid-area: footer;
+}
+
+/* Imágenes adaptables */
 img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 0.5rem;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
 }
 
-
+/* Estructura del sitio */
 /* =========================
-   6. FOOTER
+   HEADER PRINCIPAL NAVAR
 ========================= */
-
-.footer-principal {
-    background-color: #1f2937;
-    color: #ffffff;
-    padding: 1.5rem 2rem;
-    text-align: center;
+.header-principal {
+  background-color: #1f2937;
+  color: #ffffff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.header-principal nav ul:not(.navbar-nav) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.header-principal nav a:not(.nav-link) {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.header-principal nav a:not(.nav-link):hover {
+  color: #f59e0b;
+}
+.header-principal .marca {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
-.footer-principal a {
-    color: #f59e0b;
-    text-decoration: none;
-}
-
-.footer-principal a:hover {
-    text-decoration: underline;
-}
-
-/* =================================
-   7. MEDIA QUERIES - ESCRITORIO
-================================= */
-
+/* Encabezado horizontal en escritorio */
 @media (min-width: 1024px) {
-
-    /* Encabezado horizontal */
-    .header-principal {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1rem 2rem;
-    }
-
-    /* Proyectos distribuidos en 3 columnas */
-    .contenedor-proyectos {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
+  .header-principal {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
 }
-
-/* NAVBAR PERSONALIZADA NAVAR */
-
+/* =========================
+   NAVBAR PERSONALIZADA NAVAR
+========================= */
 .navbar-navar {
-    background-color: #263746;
+  background-color: #263746;
 }
-
 .navbar-navar .navbar-brand {
-    color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 700;
-    white-space: normal;
-    line-height: 1.3;
-    max-width: 85%;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  white-space: normal;
+  line-height: 1.3;
+  max-width: 85%;
 }
-
 .navbar-navar .nav-link {
-    color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: color 0.3s ease, background-color 0.3s ease;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
-
-.navbar-navar .nav-link:hover {
-    color: #d6b36a;
+.navbar-navar .nav-link:hover, .navbar-navar .nav-link:focus {
+  color: #d6b36a;
 }
-
 .navbar-navar .nav-link:focus {
-    color: #d6b36a;
-    outline: 2px solid #d6b36a;
-    outline-offset: 3px;
+  outline: 2px solid #d6b36a;
+  outline-offset: 3px;
 }
-
 .navbar-navar .nav-link:active {
-    color: #ffffff;
-    background-color: #405466;
+  color: #ffffff;
+  background-color: #405466;
 }
-
 .navbar-navar .navbar-toggler {
-    border-color: #ffffff;
+  border-color: #ffffff;
 }
-
 .navbar-navar .navbar-toggler-icon {
-    filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
 }
 
+/* Ajustes de la navbar en dispositivos pequeños */
 @media (max-width: 991.98px) {
-    .navbar-navar .navbar-brand {
-        font-size: 1.1rem;
-        max-width: calc(100% - 60px);
-    }
-
-    .navbar-navar .navbar-toggler {
-        flex-shrink: 0;
-    }
-
-    .navbar-navar .navbar-collapse {
-        padding-top: 0.75rem;
-    }
-
-    .navbar-navar .nav-link {
-        padding: 0.65rem 0.25rem;
-    }
+  .navbar-navar .navbar-brand {
+    font-size: 1.1rem;
+    max-width: calc(100% - 60px);
+  }
+  .navbar-navar .navbar-toggler {
+    flex-shrink: 0;
+  }
+  .navbar-navar .navbar-collapse {
+    padding-top: 0.75rem;
+  }
+  .navbar-navar .nav-link {
+    padding: 0.65rem 0.25rem;
+  }
 }
-
-/* CAROUSEL BOOTSTRAP - NAVAR */
-
+/* =========================
+   CARRUSEL BOOTSTRAP NAVAR
+========================= */
 .imagen-carousel {
-    height: 420px;
-    object-fit: cover;
-    border-radius: 8px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 #carouselNavar .carousel-caption {
-    background-color: rgba(31, 41, 55, 0.85);
-    border-radius: 8px;
-    padding: 12px;
-    bottom: 25px;
+  background-color: rgba(31, 41, 55, 0.85);
+  border-radius: 8px;
+  padding: 12px;
+  bottom: 25px;
 }
-
 #carouselNavar .carousel-caption h3 {
-    color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin: 0;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
 }
-
+#carouselNavar .carousel-indicators {
+  z-index: 20;
+}
 #carouselNavar .carousel-indicators [data-bs-target] {
-    background-color: #f59e0b;
+  background-color: #f59e0b;
 }
-
 #carouselNavar .carousel-control-prev-icon,
 #carouselNavar .carousel-control-next-icon {
-    filter: none;
+  filter: none;
+  background-color: #263746;
+  border-radius: 50%;
+  background-size: 55% 55%;
+  width: 3rem;
+  height: 3rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
 }
-
-@media (max-width: 576px) {
-    .imagen-carousel {
-        height: 260px;
-    }
-
-    #carouselNavar .carousel-caption {
-        bottom: 12px;
-        padding: 8px;
-    }
-
-    #carouselNavar .carousel-caption h3 {
-        font-size: 0.9rem;
-    }
-}
-
-/* FLECHAS DEL CAROUSEL NAVAR */
-#carouselNavar .carousel-control-prev-icon,
-#carouselNavar .carousel-control-next-icon {
-    background-color: #263746;
-    border-radius: 50%;
-    background-size: 55% 55%;
-    width: 3rem;
-    height: 3rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
-}
-
 #carouselNavar .carousel-control-prev,
 #carouselNavar .carousel-control-next {
-    width: 10%;
-    opacity: 1;
+  width: 10%;
+  opacity: 1;
 }
-
 #carouselNavar .carousel-control-prev:hover,
 #carouselNavar .carousel-control-next:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
-/* INDICADORES DEL CAROUSEL - NAVAR */
-#carouselNavar .carousel-indicators {
-    z-index: 20;
+/* Ajustes del carrusel en móviles */
+@media (max-width: 576px) {
+  .imagen-carousel {
+    height: 260px;
+  }
+  #carouselNavar .carousel-caption {
+    bottom: 12px;
+    padding: 8px;
+  }
+  #carouselNavar .carousel-caption h3 {
+    font-size: 0.9rem;
+  }
+}
+/* =========================
+   FOOTER PRINCIPAL NAVAR
+========================= */
+.footer-principal {
+  background-color: #1f2937;
+  color: #ffffff;
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+.footer-principal a {
+  color: #f59e0b;
+  text-decoration: none;
+}
+.footer-principal a:hover {
+  text-decoration: underline;
 }
 
-/* ================================
-   INTERACTIVIDAD BOOTSTRAP - NAVAR
-================================ */
+/* Componentes */
+/* =========================
+   SECCIONES Y TARJETAS NAVAR
+========================= */
+/* Sección principal de cada página */
+.seccion-principal {
+  background-color: #ffffff;
+  margin: 1.5rem 0;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
 
-/* Transición suave de las tarjetas */
+/* Contenedores flexibles */
+.contenedor-servicios,
+.contenedor-pagina-servicios,
+.contenedor-perfil,
+.contenedor-contacto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Tarjetas de servicios */
+.contenedor-servicios article {
+  flex: 1 1 300px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+/* Tarjetas de la página de servicios */
+.contenedor-pagina-servicios article {
+  flex: 1 1 250px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+/* Tarjetas de perfil y contacto */
+.contenedor-perfil article,
+.contenedor-contacto article {
+  flex: 1 1 300px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+/* Cuadrícula de proyectos */
+.contenedor-proyectos {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+}
+.contenedor-proyectos article {
+  flex: 1 1 250px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+/* Adaptación de proyectos para escritorio */
+@media (min-width: 1024px) {
+  .contenedor-proyectos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+/* Efecto visual de las tarjetas Bootstrap */
 .card {
-    transition: transform 0.25s ease,
-                box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-
-/* Estado hover de las tarjetas */
 .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
-/* Transición de los botones */
+/* =========================
+   BOTONES NAVAR
+========================= */
 .btn {
-    transition: background-color 0.25s ease,
-                color 0.25s ease,
-                box-shadow 0.25s ease;
+  transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
 }
-
-/* Estado hover de los botones */
-.btn-dark:hover {
-    background-color: #405466;
-    border-color: #405466;
-}
-
-/* Estado focus visible para teclado */
 .btn:focus-visible {
-    outline: 3px solid #d6b36a;
-    outline-offset: 3px;
-    box-shadow: none;
+  outline: 3px solid #d6b36a;
+  outline-offset: 3px;
+  box-shadow: none;
 }
 
-/* Estado active al pulsar los botones */
+/* Estados del botón oscuro de Bootstrap */
+.btn-dark:hover {
+  background-color: #405466;
+  border-color: #405466;
+}
 .btn-dark:active {
-    background-color: #1f2937;
-    border-color: #1f2937;
-    transform: scale(0.98);
+  background-color: #1f2937;
+  border-color: #1f2937;
+  transform: scale(0.98);
 }

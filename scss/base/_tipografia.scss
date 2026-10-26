@@ -1,0 +1,33 @@
+
+/* =========================
+   TIPOGRAFÍA NAVAR
+========================= */
+
+@use "../utilities/variables" as v;
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: v.$color-oscuro;
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: v.$color-oscuro;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: v.$color-titulo-secundario;
+}
+
+p {
+    font-size: v.$fuente-cuerpo;
+    font-weight: 400;
+    line-height: 1.6;
+}

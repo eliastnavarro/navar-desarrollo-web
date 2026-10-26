@@ -1,0 +1,85 @@
+
+/* =========================
+   SECCIONES Y TARJETAS NAVAR
+========================= */
+
+@use "../utilities/mixins" as m;
+
+@use "../utilities/variables" as v;
+
+/* Sección principal de cada página */
+
+.seccion-principal {
+    background-color: v.$color-blanco;
+    margin: 1.5rem 0;
+    padding: 2rem;
+    border-radius: v.$radio-borde;
+}
+
+/* Contenedores flexibles */
+.contenedor-servicios,
+.contenedor-pagina-servicios,
+.contenedor-perfil,
+.contenedor-contacto {
+    @include m.contenedor-flexible(20px);
+}
+
+
+/* Tarjetas de servicios */
+.contenedor-servicios article {
+    flex: 1 1 300px;
+    padding: 20px;
+    background-color: v.$color-fondo;
+    border-radius: v.$radio-tarjeta;
+}
+
+/* Tarjetas de la página de servicios */
+.contenedor-pagina-servicios article {
+    flex: 1 1 250px;
+    padding: 20px;
+    background-color: v.$color-fondo;
+    border-radius: v.$radio-tarjeta;
+}
+
+/* Tarjetas de perfil y contacto */
+.contenedor-perfil article,
+.contenedor-contacto article {
+    flex: 1 1 300px;
+    padding: 20px;
+    background-color: v.$color-fondo;
+    border-radius: v.$radio-tarjeta;
+}
+
+/* Cuadrícula de proyectos */
+.contenedor-proyectos {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+
+    article {
+        flex: 1 1 250px;
+        padding: 20px;
+        background-color: v.$color-fondo;
+        border-radius: v.$radio-tarjeta;
+    }
+}
+
+/* Adaptación de proyectos para escritorio */
+@media (min-width: 1024px) {
+    .contenedor-proyectos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* Efecto visual de las tarjetas Bootstrap */
+
+.card {
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+}
+

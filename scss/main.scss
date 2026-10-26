@@ -1,0 +1,21 @@
+
+/* =========================
+   NAVAR | ARCHIVO PRINCIPAL SCSS
+========================= */
+
+/* Herramientas */
+@use "utilities/variables";
+@use "utilities/mixins";
+
+/* Estilos generales */
+@use "base/tipografia";
+@use "base/base";
+
+/* Estructura del sitio */
+@use "layout/header";
+@use "layout/nav";
+@use "layout/footer";
+
+/* Componentes */
+@use "components/cards";
+@use "components/buttons";

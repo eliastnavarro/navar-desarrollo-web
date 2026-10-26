@@ -1,0 +1,57 @@
+
+/* =========================
+   HEADER PRINCIPAL NAVAR
+========================= */
+
+@use "../utilities/variables" as v;
+
+.header-principal {
+    background-color: v.$color-oscuro;
+    color: v.$color-blanco;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    nav {
+        ul:not(.navbar-nav) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        a:not(.nav-link) {
+            color: v.$color-blanco;
+            text-decoration: none;
+            font-weight: 600;
+
+            &:hover {
+                color: v.$color-acento;
+            }
+        }
+    }
+
+    .marca {
+        margin: 0;
+        color: v.$color-blanco;
+        font-size: v.$fuente-marca;
+        font-weight: 700;
+    }
+}
+
+/* Encabezado horizontal en escritorio */
+@media (min-width: 1024px) {
+    .header-principal {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+}
