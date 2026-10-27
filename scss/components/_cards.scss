@@ -54,13 +54,20 @@
 .contenedor-proyectos {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    gap: 20px;
+    gap: v.$espaciado-sm * 1.25;
 
     article {
         flex: 1 1 250px;
         padding: 20px;
         background-color: v.$color-fondo;
         border-radius: v.$radio-tarjeta;
+    }
+}
+
+/* Adaptación de proyectos para tabletas */
+@media (min-width: 768px) {
+    .contenedor-proyectos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 

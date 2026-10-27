@@ -1,0 +1,36 @@
+
+@use "../utilities/variables" as v;
+
+/* Estilo base reutilizable para elementos animados */
+%elemento-animado {
+    animation-duration: 0.7s;
+    animation-fill-mode: both;
+}
+
+/* Animación de entrada suave */
+@keyframes navar-entrada {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicación de la animación mediante @extend */
+.animacion-entrada {
+    @extend %elemento-animado;
+    animation-name: navar-entrada;
+}
+
+/* Respeto por la preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    .animacion-entrada {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}

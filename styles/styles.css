@@ -329,7 +329,7 @@ img {
 .contenedor-proyectos {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 20px;
+  gap: 1.25rem;
 }
 .contenedor-proyectos article {
   flex: 1 1 250px;
@@ -338,6 +338,12 @@ img {
   border-radius: 8px;
 }
 
+/* Adaptación de proyectos para tabletas */
+@media (min-width: 768px) {
+  .contenedor-proyectos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 /* Adaptación de proyectos para escritorio */
 @media (min-width: 1024px) {
   .contenedor-proyectos {
@@ -375,3 +381,36 @@ img {
   border-color: #1f2937;
   transform: scale(0.98);
 }
+
+/* Estilo base reutilizable para elementos animados */
+.animacion-entrada {
+  animation-duration: 0.7s;
+  animation-fill-mode: both;
+}
+
+/* Animación de entrada suave */
+@keyframes navar-entrada {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Aplicación de la animación mediante @extend */
+.animacion-entrada {
+  animation-name: navar-entrada;
+}
+
+/* Respeto por la preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .animacion-entrada {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
